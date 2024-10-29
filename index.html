@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Caixas</title>
+    <link rel="stylesheet" href="caixamisteriosa.css">
+    <script src="caixamisteriosa.js" defer></script> <!-- Carrega o JavaScript -->
+</head>
+<body>
+    <div id="modal_alerta">
+        <div id="alerta">
+            <div id="title">
+                <span class="title">Atenção</span>
+                <span class="fechar" onclick="fecharAlerta()">✖</span> <!-- Usei um 'X' como ícone de fechar -->
+            </div>
+            <div id="content">
+                <p>Você já abriu essa caixa!</p>
+            </div>
+        </div>
+    </div>
+    <div class="header-container"> <!-- Novo contêiner para a imagem e o container -->
+        <img src="logo.gif" class="header-image" alt="Imagem de Cabeçalho">
+    <div class="container">
+        <h1 class="title">
+            <img src="icon_topicos.png" alt="Ícone" class="icon"> CAIXAS MISTERIOSAS
+        </h1>
+        <div class="slots">
+            <div class="slot" id="slot1" onclick="openBox('slot1')">
+                <img src="box-original.png" class="box" alt="Caixa">
+                <img src="" class="item" alt="Item" style="display: none;">
+            </div>
+            <div class="slot" id="slot2" onclick="openBox('slot2')">
+                <img src="box-original.png" class="box" alt="Caixa">
+                <img src="" class="item" alt="Item" style="display: none;">
+            </div>
+            <div class="slot" id="slot3" onclick="openBox('slot3')">
+                <img src="box-original.png" class="box" alt="Caixa">
+                <img src="" class="item" alt="Item" style="display: none;">
+            </div>
+        </div>
+        <a href="painel.html">Gerenciar Itens</a>
+    </div>
+</body>
+</html>

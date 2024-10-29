@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Gerenciamento</title>
+    <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GERENCIADOR DE ITENS</h1>
+        <div id="itemManager">
+            <div class="slot-input">
+                <label for="slot">Selecione o Slot:</label>
+                <select id="slot">
+                    <option value="0">Slot 1</option>
+                    <option value="1">Slot 2</option>
+                    <option value="2">Slot 3</option>
+                    <option value="3">Slot 4</option>
+                    <option value="4">Slot 5</option>
+                </select>
+            </div>
+            <div class="item-input">
+                <label for="itemName">Nome do Item:</label>
+                <input type="text" id="itemName" placeholder="Ex: item1.png">
+            </div>
+            <div class="probability-input">
+                <label for="probability">Probabilidade:</label>
+                <input type="number" id="probability" min="0" max="100" placeholder="Ex: 20">
+            </div>
+            <button onclick="addItem()">Adicionar Item</button>
+        </div>
+        <h2>Itens por Slot</h2>
+        <div id="itemsList"></div>
+    </div>
+
+    <script src="painel.js"></script>
+</body>
+</html>

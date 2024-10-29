@@ -1,0 +1,107 @@
+/* Estilos gerais do painel */
+#item-panel {
+    background-color: #d70043; /* Cor de fundo do painel */
+    border: 1px solid #d70043; /* Borda do painel */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 200px; /* Espaçamento interno */
+    margin: 200px; /* Margem externa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do painel */
+    font-family: "Gill Sans", sans-serif; /* Fonte do painel */
+}
+
+/* Título do painel */
+#item-panel h2 {
+    text-align: center; /* Centraliza o título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+/* Estilo para a lista de itens */
+.item-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento */
+}
+
+/* Estilo para cada item da lista */
+.item-list li {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre o item e a probabilidade */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 10px; /* Espaçamento interno */
+    border-bottom: 1px solid #ddd; /* Linha de separação entre itens */
+}
+
+/* Estilo para os inputs de item e probabilidade */
+.item-input,
+.probability-input {
+    flex: 1; /* Faz com que o input ocupe o espaço restante */
+    padding: 5px; /* Espaçamento interno */
+    margin-right: 10px; /* Margem à direita */
+    border: 1px solid #ccc; /* Borda do input */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo para o botão de adicionar */
+.add-item-btn {
+    background-color: #28a745; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor do botão */
+}
+
+/* Efeito de hover no botão */
+.add-item-btn:hover {
+    background-color: #218838; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para o botão de remover */
+.remove-item-btn {
+    background-color: #dc3545; /* Cor do botão de remover */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+/* Efeito de hover no botão de remover */
+.remove-item-btn:hover {
+    background-color: #c82333; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para mensagens de feedback */
+.feedback {
+    text-align: center; /* Centraliza o texto */
+    color: #007bff; /* Cor do texto de feedback */
+    margin-top: 10px; /* Margem acima da mensagem */
+}
+
+/* Estilo para a área de edição de itens */
+.edit-area {
+    margin-top: 20px; /* Margem acima da área de edição */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda da área de edição */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #f1f1f1; /* Cor de fundo da área de edição */
+}
+
+/* Estilo para o botão de voltar ao jogo */
+.back-btn {
+    background-color: #007bff; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-top: 20px; /* Margem acima do botão */
+    display: block; /* Faz o botão ocupar a largura total */
+    text-align: center; /* Centraliza o texto do botão */
+}
+
+/* Efeito de hover no botão de voltar ao jogo */
+.back-btn:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}

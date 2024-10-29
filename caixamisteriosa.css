@@ -1,0 +1,165 @@
+body {
+    background-color: #02081e;
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem de fundo */
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+    height: 100vh; /* Altura total da janela */
+    margin: 0; /* Remove margens padrão */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.header-image {
+    width: 230px; /* Largura ajustada para o logotipo */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem é um bloco */
+    margin: 20px auto; /* Espaço acima e abaixo */
+}
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco com opacidade */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do container */
+}
+
+.title {
+    display: flex;
+    align-items: center;  /* Alinha o ícone com o texto */
+    font-size: 22px; /* Tamanho do texto */
+    color: #01a5f6; /* Cor azul ajustável */
+    font-weight: bold; /* Negrito no título */
+    text-align: left; /* Alinha o título à esquerda */
+    margin-left: 20px; /* Adiciona espaçamento da esquerda */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.title::before {
+    content: url('icon.png'); /* Substitua 'icon.png' pelo caminho do ícone desejado */
+    display: inline-block;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.icon {
+    width: 24px; /* Ajuste o tamanho do ícone */
+    height: auto; /* Mantém a proporção do ícone */
+    margin-right: 8px; /* Espaço entre o ícone e o título */
+}
+.slots {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.slot {
+    background-color: #ffffff; /* Cor de fundo padrão */
+    background-image: url('fundo-box.png'); /* Adicione aqui a imagem de fundo do slot */
+    background-size: cover; /* Faz a imagem de fundo do slot cobrir todo o espaço do slot */
+    background-position: center; /* Centraliza a imagem de fundo do slot */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px; /* Tamanho do slot */
+    height: 150px; /* Tamanho do slot */
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex; /* Usando flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.box {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transição suave */
+}
+
+.animation {
+    width: 80%; /* Tamanho da animação (ajuste conforme necessário) */
+    height: auto; /* A altura será proporcional à largura */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+    display: none; /* Inicialmente oculto */
+    transition: opacity 0.5s ease; /* Transição suave */
+}
+
+.item {
+    width: 80px;
+    height: auto;
+    display: none; /* Oculto inicialmente */
+    opacity: 0; /* Inicia transparente */
+    transition: opacity 0.5s ease; /* Transição suave para o item */
+}
+.alert-box {
+    position: fixed;
+    top: 500px; /* Distância do topo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige o alinhamento */
+    background-color: #d70043; /* Fundo vermelho semi-transparente */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    transition: opacity 0.2s ease; /* Transição suave para a opacidade */
+    opacity: 0.9; /* Inicia visível */
+}
+
+.alert-box.hidden {
+    opacity: 0; /* Oculta a caixa de alerta */
+}
+/* Estilo do modal de alerta */
+#modal_alerta {
+    position: fixed; /* Fica fixo na tela */
+    top: 0; /* Alinhado ao topo */
+    left: 0; /* Alinhado à esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Fica acima de outros elementos */
+    display: none; /* Oculto por padrão */
+}
+
+/* Estilo do alerta */
+#alerta {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra do alerta */
+    padding: 20px; /* Espaçamento interno */
+    width: 300px; /* Largura do alerta */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do título do alerta */
+#title {
+    display: flex; /* Flexbox para o título */
+    justify-content: space-between; /* Espaçamento entre o título e o botão de fechar */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Estilo do botão de fechar */
+.fechar {
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    color: #00000073; /* Cor do texto do botão de fechar */
+}
+
+/* Estilo do texto do título */
+.title {
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo do conteúdo do alerta */
+#content {
+    margin-top: 10px; /* Espaçamento acima do conteúdo */
+}
